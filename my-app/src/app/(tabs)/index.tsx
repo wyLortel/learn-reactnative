@@ -1,13 +1,20 @@
-import CustomButton from '@/components/CustomButton';
-import { router } from 'expo-router';
-import { Text } from 'react-native';
+import { StyleSheet } from 'react-native';
+
+import FeedList from '@/components/FeedList';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { color } from '@/constants';
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView>
-      <Text>홈스크린</Text>
-      <CustomButton label="버튼" onPress={() => router.push('/auth')} />
+    <SafeAreaView style={styles.container}>
+      <FeedList />
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: color.WHITE,
+  },
+});

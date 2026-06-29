@@ -26,6 +26,26 @@ export default function AuthLayout() {
           ),
         }}
       />
+
+      <Stack.Screen
+        // 저 옵션의 타이틀이 헤더에 표시되는 이름이구나
+        name="login"
+        options={{
+          title: '이메일 로그인',
+          headerShown: true,
+          headerBackButtonDisplayMode: 'minimal',
+        }}
+      />
+
+      <Stack.Screen
+        name="signup"
+        options={{
+          // 저 옵션의 타이틀이 헤더에 표시되는 이름이구나
+          title: '회원가입',
+          headerShown: true,
+          headerBackButtonDisplayMode: 'minimal',
+        }}
+      />
     </Stack>
   );
 }
