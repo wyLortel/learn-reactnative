@@ -1,4 +1,5 @@
 import { color } from '@/constants';
+import { forwardRef } from 'react';
 import {
   StyleSheet,
   View,
@@ -32,6 +33,12 @@ function InputFiled({
         <TextInput
           placeholderTextColor={color.GRAY[500]}
           style={styles.input}
+          //멋대로 첫글자 대문자로 하는 디능 끄기
+          autoCapitalize="none"
+          //맞춤법 검사 끄기
+          spellCheck={false}
+          //자동완성 끄기
+          autoCorrect={false}
           {...props}
         />
       </View>
@@ -76,4 +83,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default InputFiled;
+export default forwardRef(InputFiled);
